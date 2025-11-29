@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cu4hxl20pi6t6"]
+
+[ext_resource type="Script" uid="uid://c7j1iyelgvofi" path="res://scripts/player_wormy.gd" id="1_0ajie"]
+[ext_resource type="Texture2D" uid="uid://dyo3dq0qx2cgv" path="res://assets/Wormy/Wormy.png" id="2_jb4kv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t2yx8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jb4kv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lbwrr"]
+radius = 3.0
+height = 16.0
+
+[node name="player-wormy" type="CharacterBody2D"]
+script = ExtResource("1_0ajie")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_t2yx8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_lbwrr")
