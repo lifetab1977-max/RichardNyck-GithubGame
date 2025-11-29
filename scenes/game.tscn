@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://2ud3fs4hxs28"]
+
+[node name="Game" type="Node2D"]
+position = Vector2(-155, -29)
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(8, 8)
+offset_left = -6.0
+offset_top = -1.0
+offset_right = 343.0
+offset_bottom = 74.0
+text = "Hallo Richard, hier wird Main Game gemacht.
+(Work in Progress)
+LG Nyck "
